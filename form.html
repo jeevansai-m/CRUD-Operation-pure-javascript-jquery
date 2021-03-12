@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="Scripts.js"></script>
+  <script src="binding.js"></script>
+</style>
+</head >
+<body onload="Tab_Open(event, 'Register')">
+<div class="container"> 
+  <ul class="nav nav-pills nav-justified" role="tablist">
+    <li><a onclick="Tab_Open(event, 'Register')">Register</a></li>
+    <li><a onclick="Tab_Open(event, 'search')">search records</a></li>     
+  </ul>
+</div>
+<!-- register tab 1 1 1 1  -->
+<div id="Register" class="tabcontent">
+  <!-- register tab 1 1 1 1  -->
+
+<div class="container" style="width: 400px; max-height: 800px;" >
+
+  <form autocomplete="off" name="myForm">
+    <div class="form-group">
+      <label for="txtname">Name:</label>
+      <input type="text" class="form-control" placeholder="Enter Name" id="txtname">
+    </div>
+    <div class="form-group">
+      <label for="txtemail">E-mail:</label>
+      <input type="text" class="form-control" placeholder="Enter email" id="txtemail">
+    </div>
+    <div class="form-group">
+      <label for="txtpnum">Phone NO:</label>
+      <input type="text" class="form-control" placeholder="Enter number" id="txtpnum">
+    </div>
+    <div class="form-group">
+      <label >Country:</label>
+      <select onchange="State_appended()" class="form-control" id="country">
+        <option selected disabled value="select">-choose country-</option>
+        <option value="INDIA">INDIA</option>
+        <option value="USA">USA</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label >State:</label>
+      <select onchange="dist_appended()" class="form-control" id="state">
+        <option selected disabled value="select">-choose state-</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label >Districts:</label>
+      <select class="form-control" id="dist">
+        <option selected disabled value="select">-choose districts-</option>
+      </select>
+    </div>
+    <div class="form-group form-radio">
+      <label >Gender:</label>&nbsp&nbsp
+      <label class="form-radio-label">
+        <input class="form-radio-input" value="male" type="radio" id="male" name="gender"> male
+      </label>&nbsp&nbsp<label class="form-radio-label" value="male">
+        <input class="form-radio-input" type="radio" id="female" name="gender" value="female"> female
+      </label>&nbsp&nbsp<label class="form-radio-label">
+        <input class="form-radio-input" type="radio"id="other" name="gender" value="other"> other
+      </label>
+    </div>
+    <!-- action button controll submit and Clear -->
+    <div  class="form-action-buttons">
+    <input type="button" id="fsubmit" onclick="Btn_onform_submit()" value="submit" class="btn btn-primary"></input>
+    <input type="button" onclick="BTN_Form_Clear()" value="Clear"class="btn btn-primary"></input>
+  </div>
+  </form>
+</div>
+</div>
+<!-- search tab2222 -->
+<div id="search" class="tabcontent">
+<!-- search tab2222 -->
+
+  <div class="container" >
+    <form class="form-inline" action="">
+      <a><b>Search:</b></a>
+      <div class="form-group">
+        <label for="txtsearchname">Name:</label>
+        <input  type="text" class="form-control" id="txtsearchname" placeholder="search Name" name="txtsearchname">
+      </div>
+      <div class="form-group">
+        <label for="txtsearchemail">E-mail:</label>
+        <input  type="text" class="form-control" id="txtsearchemail" placeholder="search E-mail" name="txtsearchemail">
+      </div>
+      <div class="form-group">
+        <label>Status:</label>
+        <select class="dropdown" onchange="btn_dropdown_search()" id="drpstatussearch">
+          <option value="">All</option>
+          <option value="áctive">áctive</option>
+          <option value="inactive">inactive</option>
+        </select>
+      </div>
+      <input type="button"  onclick="btn_email_search();btn_search();" class="btn btn-default"id="btnsearch" value="Submit">&nbsp &nbsp
+      <input type="button" onclick="BTN_search_clear()" class="btn btn-default" id="btnsearchclear" value="Clear">
+    </form>
+  </div><br/>
+  <div class="container">           
+    <table class="table table-striped" id="tblrecords">
+      <thead>
+        <tr>
+            <th>NAME</th>
+            <th>EMAIL-ID</th>
+            <th>PHONE NUMBER</th>
+            <th>COUNTRY</th>
+            <th>STATE</th>
+            <th>DISTRICT</th>
+            <th>GENDER</th>
+            <th>STATUS</th>
+            <th>EDIT/DELETE</th>
+        </tr>
+    </thead>
+    <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

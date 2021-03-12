@@ -1,0 +1,79 @@
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  th {
+    text-align: left;
+  }
+  #h2 {background-color: #ff9797;}
+
+  body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: CENTER;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  text-align: center;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+
+
+
+/* body {
+    font-family: Arial;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+} */
+
